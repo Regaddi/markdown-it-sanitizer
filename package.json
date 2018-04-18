@@ -19,7 +19,11 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "precommit": "lint-staged",
     "test": "make test"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
   },
   "devDependencies": {
     "browserify": "^13.1.0",
@@ -27,6 +31,7 @@
     "coveralls": "^2.11.13",
     "eslint": "2.11.1",
     "istanbul": "^0.4.5",
+    "lint-staged": "^7.0.4",
     "markdown-it": "^8.0.0",
     "markdown-it-diaspora-mention": "^0.4.0",
     "markdown-it-for-inline": "^0.1.1",
